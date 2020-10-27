@@ -2,9 +2,9 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const token = require("./token.json")
 
+client.login(process.env.TOKEN);
 
 bot.on("ready", async () =>{
-    console.log("le bot est allumé")
     bot.user.setStatus("online")
     bot.user.setActivity("Pornhub", {type: 'WATCHING'})
 })
@@ -18,3 +18,4 @@ bot.on("guildMemberAdd", member => {
 
 
 bot.login(token.token);
+
